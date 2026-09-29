@@ -12,6 +12,6 @@ A Claude Code plugin marketplace.
 
 | Plugin | Description |
 | ------ | ----------- |
-| [ship](plugins/ship) | Ship one thread of the current conversation as a self-contained prompt you can paste into a new session. |
+| [denguledansker-plugin](plugins/denguledansker-plugin) | Personal skills. `/ship` turns one thread of the conversation into a handoff prompt for a new session. |
 
 Install a plugin with `/plugin install <name>@skills`.
