@@ -4,7 +4,7 @@
   "description": "Preview images you copy to the clipboard before pasting them into Claude Code, and get a file path you can paste instead.",
   "author": {
     "name": "Chi Linh Mac",
-    "email": "clm@dataminds.com"
+    "email": "chilinhm@gmail.com"
   },
   "keywords": ["clipboard", "image", "preview", "screenshot"]
 }
