@@ -1,0 +1,16 @@
+{
+  "name": "skills",
+  "description": "Claude Code plugins and skills by Chi Linh Mac.",
+  "owner": {
+    "name": "Chi Linh Mac",
+    "email": "clm@dataminds.com"
+  },
+  "plugins": [
+    {
+      "name": "paste-preview",
+      "source": "./plugins/paste-preview",
+      "description": "Preview images you copy to the clipboard before pasting them into Claude Code.",
+      "version": "1.0.0"
+    }
+  ]
+}
