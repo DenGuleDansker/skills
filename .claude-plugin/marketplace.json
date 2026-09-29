@@ -7,9 +7,9 @@
   },
   "plugins": [
     {
-      "name": "paste-preview",
-      "source": "./plugins/paste-preview",
-      "description": "Preview images you copy to the clipboard before pasting them into Claude Code.",
+      "name": "ship",
+      "source": "./plugins/ship",
+      "description": "Ship one thread of the current conversation as a self-contained prompt for a new session.",
       "version": "1.0.0"
     }
   ]

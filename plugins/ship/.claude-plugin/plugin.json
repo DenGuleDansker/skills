@@ -1,0 +1,10 @@
+{
+  "name": "ship",
+  "version": "1.0.0",
+  "description": "Ship one thread of the current conversation as a self-contained prompt you can paste into a new session.",
+  "author": {
+    "name": "Chi Linh Mac",
+    "email": "chilinhm@gmail.com"
+  },
+  "keywords": ["handoff", "prompt", "session", "context"]
+}

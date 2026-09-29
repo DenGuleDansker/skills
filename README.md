@@ -12,6 +12,6 @@ A Claude Code plugin marketplace.
 
 | Plugin | Description |
 | ------ | ----------- |
-| [paste-preview](plugins/paste-preview) | Preview images you copy to the clipboard before pasting them into Claude Code. |
+| [ship](plugins/ship) | Ship one thread of the current conversation as a self-contained prompt you can paste into a new session. |
 
 Install a plugin with `/plugin install <name>@skills`.
