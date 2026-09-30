@@ -27,6 +27,13 @@ cat >"$dir/run.sh" <<EOF
 cd $(printf '%q' "$workdir") || exit 1
 prompt=\$(cat $(printf '%q' "$dir/prompt.md"))
 rm -rf $(printf '%q' "$dir")
+# The new terminal inherits the environment of the Claude Code session that
+# launched it. Drop that session's markers so the new one is a normal,
+# top-level session (otherwise it treats itself as a child and doesn't save
+# its transcript).
+unset CLAUDECODE CLAUDE_CODE_CHILD_SESSION CLAUDE_CODE_SESSION_ID CLAUDE_PID \\
+  CLAUDE_EFFORT CLAUDE_CODE_ENTRYPOINT CLAUDE_CODE_EXECPATH CLAUDE_CODE_SESSION_ATTENDED \\
+  CLAUDE_CODE_MESSAGING_SOCKET CLAUDE_CODE_MESSAGING_TOKEN
 exec $(printf '%q' "$claude_bin") "\$prompt"
 EOF
 chmod +x "$dir/run.sh"
