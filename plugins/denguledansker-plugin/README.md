@@ -19,7 +19,7 @@ Hand off one part of a conversation to a new Claude Code session, while the curr
 /ship the login refactor
 ```
 
-Claude writes a self-contained prompt covering only that thread and shows it in the chat as a single code block. Copy it into a new session to continue from there. The prompt covers:
+Claude writes a self-contained prompt covering only that thread and shows it in the chat as a single code block. Then it asks whether you want to copy it yourself, or have Claude start a new session with it. A new session opens in a new terminal tab (Windows Terminal, macOS Terminal, tmux or common Linux terminals) in the same project. The prompt covers:
 
 - the goal,
 - the context: repo, branch, environment,

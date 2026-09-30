@@ -10,7 +10,7 @@
       "name": "denguledansker-plugin",
       "source": "./plugins/denguledansker-plugin",
       "description": "Personal Claude Code skills by Chi Linh Mac. Currently: /ship, which turns one thread of the conversation into a handoff prompt for a new session.",
-      "version": "1.0.0"
+      "version": "1.1.0"
     }
   ]
 }

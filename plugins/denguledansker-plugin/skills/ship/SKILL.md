@@ -34,8 +34,27 @@ Write it to the new session's Claude, in the second person ("You are continuingâ
 
 Keep it tight: facts and pointers, no narrative of the conversation. Aim for something the user can read in under a minute.
 
-## 4. Output
+## 4. Show it
 
-Show the prompt in the chat as **one fenced code block** so it copies cleanly. If the prompt itself contains ``` fences, wrap the whole thing in a longer fence (````) so it does not break. Put nothing else inside the block.
+Show the prompt in the chat as **one fenced code block**, so the user can read it and it copies cleanly. If the prompt itself contains ``` fences, wrap the whole thing in a longer fence (````) so it does not break. Put nothing else inside the block.
 
-After the block, add one short line saying which thread was shipped and anything you deliberately left out. Do not write files, copy to the clipboard or start other work unless the user asks.
+After the block, add one short line saying which thread was shipped and anything you deliberately left out.
+
+## 5. Ask how to continue
+
+Ask with the AskUserQuestion tool:
+
+- **Copy it myself**: done. Nothing more to do.
+- **Start a new session**: open a new terminal with a Claude Code session that starts with this prompt.
+
+For a new session:
+
+1. Write the prompt, exactly as shown, to a new file in your scratchpad or temp directory (e.g. `ship-prompt.md`).
+2. Run the launcher with the Bash tool, passing the working directory the new session should start in (normally the current project root):
+   ```bash
+   bash "${CLAUDE_PLUGIN_ROOT}/skills/ship/scripts/open-session.sh" <prompt-file> <working-dir>
+   ```
+   It opens a new Windows Terminal tab, macOS Terminal window, tmux window or Linux terminal, and starts `claude` there with the prompt as the first message. The prompt is read from the file, so quotes and newlines are safe.
+3. If it exits non-zero (no supported terminal found), say so in one line and tell the user to copy the block above.
+
+Do not start any other work in this session as part of shipping; this session simply continues.
